@@ -1,8 +1,7 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-}
-
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.hangwangyu'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
