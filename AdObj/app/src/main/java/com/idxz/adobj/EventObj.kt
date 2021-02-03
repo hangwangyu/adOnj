@@ -12,6 +12,12 @@ import java.util.HashMap
 
 object EventObj {
 
+    val REGIST = AppEventsConstants.EVENT_NAME_CONTACT
+    val APPLY = AppEventsConstants.EVENT_NAME_ADDED_TO_CART
+    val LOADSU = AppEventsConstants.EVENT_NAME_ADDED_TO_WISHLIST
+    val BLACK = AppEventsConstants.EVENT_NAME_SEARCHED
+    val REFUSE = AppEventsConstants.EVENT_NAME_START_TRIAL
+
     @SuppressLint("MissingPermission")
     fun setEvent(
         content: Context,

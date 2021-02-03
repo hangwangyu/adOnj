@@ -24,7 +24,6 @@ object SdkInitializeObj {
 
         FirebaseApp.initializeApp(context)
 
-
         val conversionDataListener = object : AppsFlyerConversionListener {
             override fun onConversionDataSuccess(data: MutableMap<String, Any>?) {
                 context.getSharedPreferences(appPackage + "_preferences", Context.MODE_PRIVATE)
