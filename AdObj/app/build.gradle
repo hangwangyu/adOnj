@@ -51,6 +51,7 @@ dependencies {
 
     implementation 'com.appsflyer:af-android-sdk:5.0.0'
     implementation 'io.branch.sdk.android:library:5.+'
+    implementation 'com.alibaba:fastjson:1.2.35'
 
 
 }
