@@ -3,6 +3,7 @@ package com.idxz.adobj
 import android.app.Application
 import android.content.Context
 import android.provider.Settings.System.putString
+import android.util.Log
 import com.alibaba.fastjson.JSONObject
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
@@ -26,8 +27,10 @@ object SdkInitializeObj {
 
         val conversionDataListener = object : AppsFlyerConversionListener {
             override fun onConversionDataSuccess(data: MutableMap<String, Any>?) {
+
                 context.getSharedPreferences(appPackage + "_preferences", Context.MODE_PRIVATE)
-                    .getString("afData", dataToJson(data))
+                    .edit().putString("afData", dataToJson(data))
+                Log.e("----------",dataToJson(data))
             }
 
             override fun onConversionDataFail(error: String?) {
